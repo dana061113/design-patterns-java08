@@ -1,0 +1,20 @@
+package decorator.decorators;
+
+import decorator.beverages.Beverage;
+
+public class WhippedCream extends BeverageDecorator {
+
+    public WhippedCream(Beverage beverage) {
+        super(beverage);
+    }
+
+    @Override
+    public String getDescription() {
+        return beverage.getDescription() + ", Whipped Cream";
+    }
+
+    @Override
+    public double cost() {
+        return beverage.cost() + 0.7;
+    }
+}
